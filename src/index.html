@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="
+      worker-src blob:; 
+      child-src blob: gap:;
+      img-src 'self' blob: data:;
+      default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>Метод Крамера</title>
+</head>
+
+<body>
+  <main class="wrapper">
+    <section class="main_info">
+
+      <button class="tab_btn btn">Скрыть панель</button>
+      <button class="lesson_btn btn">(?)</button>
+      <div class="form_panel">
+        <div class="matrix">
+          <div>
+            <label>
+              x<i>1</i>
+              <input id="a11" type="number" class="matrix__input" value="0">
+            </label>
+
+            <label>
+              x<i>2</i>
+              <input id="a12" type="number" class="matrix__input" value="0">
+            </label>
+
+            <label>
+              x<i>3</i>
+              <input id="a13" type="number" class="matrix__input" value="0">
+            </label>
+
+            <label>
+              =
+              <input id="b1" type="number" class="matrix__input" value="0">
+            </label>
+          </div>
+          <div>
+
+            <label>
+              x<i>1</i>
+              <input id="a21" type="number" class="matrix__input" value="0">
+            </label>
+
+            <label>
+              x<i>2</i>
+              <input id="a22" type="number" class="matrix__input" value="0">
+            </label>
+
+            <label>
+              x<i>3</i>
+              <input id="a23" type="number" class="matrix__input" value="0">
+            </label>
+            <label>
+              =
+              <input id="b2" type="number" class="matrix__input" value="0">
+            </label>
+          </div>
+          <div>
+            <label>
+              x<i>1</i>
+              <input id="a31" type="number" class="matrix__input" value="0">
+            </label>
+            <label>
+              x<i>2</i>
+              <input id="a32" type="number" class="matrix__input" value="0">
+            </label>
+            <label>
+              x<i>3</i>
+              <input id="a33" type="number" class="matrix__input" value="0">
+            </label>
+            <label>
+              =
+              <input id="b3" type="number" class="matrix__input" value="0">
+            </label>
+          </div>
+        </div>
+        <button id="get_res_btn" class="btn ">Решить систему уравнений</button>
+      </div>
+
+      <div class="results_field">
+        <div id="result">
+
+        </div>
+        <div id="vars">
+
+          <div class="skeleton">
+            <h2>Тут будет результат</h2>
+            <h4>Пока что тут пустота</h4>
+            <img class="skeleton_image" src="assets/hole.png">
+            <h6>В прямом смысле...</h6>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="modal dn">
+      <div>
+        <button class="btn_cls">&times;</button>
+      </div>
+      <div class="modal_text container">
+        <h1>Дополнительная информация</h1>
+        <div class="modal_text__links">
+          <a href="info/info.html">→ Справка</a>
+          <a href="docs/docs.html">→ Документация</a>
+        </div>
+      </div>
+      <img class="modal__bg" src="assets/bg.png"/>
+    </section>
+  </main>
+
+  <script src="lib/turndown.js"></script>
+  <script src="biba.js"></script>
+</body>
+
+</html>
